@@ -1,35 +1,135 @@
 import React from "react"
 import { Link } from "gatsby"
+const $ = typeof window !== `undefined` ? require("jquery") : null
 
-const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
-  let header
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitter,faFacebook,faGooglePlus,faInstagram,faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-  if (isRootPath) {
-    header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
-    )
-  }
-
+const Layout = ({ location, title, children, className }) => {
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
+<div className={className}>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
+<style>{`
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+`}</style>
+<script>
+if (typeof window !== `undefined`) {
+  $ && $(function(){
+    $(".headC").click(function(){
+      $(".headB").slideToggle()
+    })
+  })
+}
+</script>
+
+    <header>
+    <div className="container">
+      <div className="container-small">
+        <Link to="/" className="headA">LOGGER</Link>
+    
+        <button type="button" className="headC">
+          <FontAwesomeIcon icon={faBars} />
+        </button>
+      </div>
+    
+      <nav className="headB">
+        <ul>
+          <li><Link to="/">トップ</Link></li>
+          <li><Link to="/contents">コンテンツ</Link></li>
+          <li><Link to="/about">ABOUT</Link></li>
+          <li><Link to="/contact">お問い合わせ</Link></li>
+        </ul>
+      </nav>
     </div>
+    </header>
+
+    {children}
+    
+    <footer>
+    <div className="container">
+    
+      <div className="footA">
+        <h2>LOGGER</h2>
+        <p>
+        〒000-0000 東京都中央区杉並3-3-3-403<br/>
+        <Link to="/">http://logger.nett/</Link>
+        </p>
+    
+        <nav className="footD">
+          <ul>
+            <li><Link to="/">
+              <FontAwesomeIcon icon={faTwitter} />
+            </Link></li>
+    
+            <li><Link to="/">
+              <FontAwesomeIcon icon={faFacebook} />
+            </Link></li>
+    
+            <li><Link to="/">
+              <FontAwesomeIcon icon={faGooglePlus} />
+            </Link></li>
+    
+            <li><Link to="/">
+              <FontAwesomeIcon icon={faInstagram} />
+            </Link></li>
+    
+            <li><Link to="/">
+              <FontAwesomeIcon icon={faYoutube} />
+            </Link></li>
+          </ul>
+        </nav>
+      </div>
+    
+      <nav className="footB">
+        <div>
+          <h3>ABOUT</h3>
+          <ul>
+            <li><Link to="/">設立</Link></li>
+            <li><Link to="/">所在地</Link></li>
+            <li><Link to="/">地図</Link></li>
+            <li><Link to="/">スタッフ</Link></li>
+          </ul>
+        </div>
+    
+        <div>
+          <h3>SUPPORT</h3>
+          <ul>
+            <li><Link to="/">ダウンロード</Link></li>
+            <li><Link to="/">マニュアル</Link></li>
+            <li><Link to="/">よくある質問</Link></li>
+            <li><Link to="/">お問い合わせ</Link></li>
+          </ul>
+        </div>
+    
+        <div>
+          <h3>CONTENTS</h3>
+          <ul>
+            <li><Link to="/">お知らせ</Link></li>
+            <li><Link to="/">ビジネス</Link></li>
+            <li><Link to="/">プロフィール</Link></li>
+            <li><Link to="/">開発者</Link></li>
+            <li><Link to="/">ブログ</Link></li>
+          </ul>
+        </div>
+      </nav>
+    
+      <div className="footC">
+        © LOGGER corp. All rights reserved.
+      </div>
+    
+    </div>
+    </footer>
+</div>
   )
 }
 
