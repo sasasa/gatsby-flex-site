@@ -58,6 +58,7 @@ body {
 	color: #fff;
 	color: var(--text-bright-color);
 	text-align: center;
+	background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(../content/assets/fruits.jpg)
 }
 
 .conA.compact {
