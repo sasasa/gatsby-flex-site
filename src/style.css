@@ -579,7 +579,9 @@ header {
 	}
 
 	.headB {
-		display: none;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s ease-out;
 	}
 }
 
@@ -590,7 +592,7 @@ header {
 	}
 
 	.headB {
-		display: block !important;
+		max-height: auto;
 	}
 }
 
@@ -638,12 +640,13 @@ header {
 	text-decoration: none;
 }
 
-.bread a::after {
+/* .bread a::after {
 	margin-left: 10px;
 	content: '\f054';
 	font-family: 'FontAwesome';
+	font-weight: 400;
 	opacity: 0.3;
-}
+} */
 
 .bread a:hover {
 	background-color: rgba(0,0,0,0.3);

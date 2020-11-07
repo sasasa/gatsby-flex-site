@@ -3,30 +3,33 @@ import { Link, graphql } from "gatsby"
 import Image from "../components/image";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { faBars } from "@fortawesome/free-regular-svg-icons";
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  // const posts = data.allMarkdownRemark.nodes
 
   return (
     <Layout location={location} title={siteTitle} className="nohero">
       <SEO title="All posts" />
 
 
-<article class="post">
-<div class="container">
+<article className="post">
+<div className="container">
 
-	<div class="bread">
+	<div className="bread">
 		<ol>
-			<li><a href="index.html">トップ</a></li>
-			<li><a href="#">記事一覧</a></li>
+			<li>
+        <Link to="/">トップ&gt;</Link>
+      </li>
+			<li>
+        <Link to="/">記事一覧&gt;</Link>
+      </li>
 		</ol>
 	</div>
 
 	<h1>ライフログのはじめ方</h1>
 
-	<img src="img/life.jpg" alt=""/>
+	<Image file="life.jpg" alt="ライフ"/>
 
 	<p>日常の生活を記録し、データとして残していく「ライフログ」。ブログで日記を書くことや、毎日食べたものを写真に撮って残していくといったことも、ライフログの１つです。記録をサポートしてくれるオンラインサービスやアプリもたくさんあります。</p>
 

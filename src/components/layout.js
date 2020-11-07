@@ -1,7 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-const $ = typeof window !== `undefined` ? require("jquery") : null
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter,faFacebook,faGooglePlus,faInstagram,faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -9,29 +7,6 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 const Layout = ({ location, title, children, className }) => {
   return (
 <div className={className}>
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
-<style>{`
-.sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	border: 0;
-}
-`}</style>
-<script>
-if (typeof window !== `undefined`) {
-  $ && $(function(){
-    $(".headC").click(function(){
-      $(".headB").slideToggle()
-    })
-  })
-}
-</script>
-
     <header>
     <div className="container">
       <div className="container-small">

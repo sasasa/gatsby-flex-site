@@ -71,7 +71,39 @@ const SEO = ({ description, lang, meta, title }) => {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
+<style>{`
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+`}</style>
+<script type="text/javascript">{`
+window.addEventListener('DOMContentLoaded', (event) => {
+  function myFunc() {
+    const mymenu = document.querySelector('.headB')
+    if (mymenu.style.maxHeight) {
+      mymenu.style.maxHeight = null
+    } else {
+      mymenu.style.maxHeight = mymenu.scrollHeight + 'px'
+    }
+  }
+  
+  const headC = document.querySelector('.headC')
+  headC.addEventListener('click', function() {
+    myFunc()
+  })
+});
+
+`}</script>
+  </Helmet>
   )
 }
 

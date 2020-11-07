@@ -1,12 +1,14 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  // const posts = data.allMarkdownRemark.nodes
 
   return (
     <Layout location={location} title={siteTitle} className="nohero">
@@ -22,13 +24,13 @@ const BlogIndex = ({ data, location }) => {
 
 	<div className="contact-wrap">
 		<div className="contact">
-			<span className="fa fa-phone"></span>
+      <span><FontAwesomeIcon icon={faPhone} /></span>
 			<h2>電話</h2>
 			<a href="tel:00012345678">000-1234-5678</a>
 		</div>
 
 		<div className="contact">
-			<span className="fa fa-envelope"></span>
+      <span><FontAwesomeIcon icon={faEnvelope} /></span>
 			<h2>Eメール</h2>
 			<a href="mailto:contact@logger.nett">contact@logger.nett</a>
 		</div>
@@ -40,7 +42,7 @@ const BlogIndex = ({ data, location }) => {
 
 <aside className="location">
 <h2>LOCATION</h2>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.656784611315!2d139.80851171536258!3d35.710062680187605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ed0d12f9adf%3A0x7d1d4fb31f43f72a!2z5p2x5Lqs44K544Kr44Kk44OE44Oq44O8!5e0!3m2!1sja!2sjp!4v1465699039448" width="600" height="450" frameborder="0" style={{border: 0}} allowfullscreen></iframe>
+<iframe title="myFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.656784611315!2d139.80851171536258!3d35.710062680187605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ed0d12f9adf%3A0x7d1d4fb31f43f72a!2z5p2x5Lqs44K544Kr44Kk44OE44Oq44O8!5e0!3m2!1sja!2sjp!4v1465699039448" width="600" height="450" frameBorder="0" style={{border: 0}} allowFullScreen></iframe>
 </aside>
 
     </Layout>

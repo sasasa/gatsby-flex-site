@@ -1,12 +1,12 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  // const posts = data.allMarkdownRemark.nodes
 
   return (
     <Layout location={location} title={siteTitle} className="nohero">
@@ -31,6 +31,7 @@ const BlogIndex = ({ data, location }) => {
 	<div className="text">
 		<h2>History</h2>
 		<table>
+    <tbody>
 		<tr>
 			<th>2010年4月</th>
 			<td>LOGGER設立</td>
@@ -47,6 +48,7 @@ const BlogIndex = ({ data, location }) => {
 			<th>2015年1月</th>
 			<td>ライフログアプリをリリース</td>
 		</tr>
+    </tbody>
 		</table>
 	</div>
 </div>

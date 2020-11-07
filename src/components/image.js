@@ -43,7 +43,7 @@ const Image = (props) => (
           alt={props.alt}
           style={props.style}
           loading="eager"
-          durationFadeIn={50}
+          durationFadeIn={40}
         />
       );
     }}
