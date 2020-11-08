@@ -58,13 +58,13 @@ body {
 	color: #fff;
 	color: var(--text-bright-color);
 	text-align: center;
-	background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(../content/assets/fruits.jpg)
+	background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(../content/assets/fruits.webp)
 }
 
 .conA.compact {
 	height: 450px;
 	min-height: 0;
-	background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(../content/assets/balloon.jpg);
+	background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(../content/assets/balloon.webp);
 }
 
 .conA h1 {
@@ -238,7 +238,7 @@ body {
 
 .conC .photo {
 	min-height: 200px;
-	background-image: url(../content/assets/note.jpg);
+	background-image: url(../content/assets/note.webp);
 	background-position: center;
 	background-size: cover;
 }
@@ -311,7 +311,7 @@ body {
 
 .conD .photo {
 	min-height: 200px;
-	background-image: url(../content/assets/life.jpg);
+	background-image: url(../content/assets/life.webp);
 	background-position: center;
 	background-size: cover;
 }
@@ -679,7 +679,7 @@ header {
 
 .history .photo {
 	min-height: 300px;
-	background-image: url(../content/assets/plant.jpg);
+	background-image: url(../content/assets/plant.webp);
 	background-position: center;
 	background-size: cover;
 }
