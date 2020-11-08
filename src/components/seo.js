@@ -72,7 +72,6 @@ const SEO = ({ description, lang, meta, title }) => {
         },
       ].concat(meta)}
     >
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
 <style>{`
 .sr-only {
 	position: absolute;

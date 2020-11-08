@@ -71,6 +71,7 @@ body {
 	margin-top: 0;
 	margin-bottom: 10px;
 	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
 	font-size: 15vw;
 	letter-spacing: 0.2em;
 	margin-left: 0.2em;
@@ -385,6 +386,7 @@ footer .container {
 	margin-top: 0;
 	margin-bottom: 10px;
 	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
 	font-size: 30px;
 	letter-spacing: 0.2em;
 }
@@ -452,6 +454,7 @@ footer .container {
 	font-size: 12px;
 	text-align: center;
 	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
 }
 
 
@@ -513,6 +516,7 @@ header {
 	color: #fff;
 	color: var(--text-bright-color);
 	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
 	font-size: 24px;
 	text-decoration: none;
 }
