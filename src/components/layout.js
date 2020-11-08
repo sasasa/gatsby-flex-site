@@ -12,8 +12,9 @@ const Layout = ({ location, title, children, className }) => {
       <div className="container-small">
         <Link to="/" className="headA">LOGGER</Link>
     
-        <button type="button" className="headC">
+        <button type="button" className="headC" aria-label="メニュー切り替え">
           <FontAwesomeIcon icon={faBars} />
+          <span className="sr-only">メニュー切り替え</span>
         </button>
       </div>
     

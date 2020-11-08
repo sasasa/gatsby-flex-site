@@ -84,24 +84,6 @@ const SEO = ({ description, lang, meta, title }) => {
 	border: 0;
 }
 `}</style>
-<script type="text/javascript">{`
-window.addEventListener('DOMContentLoaded', (event) => {
-  function myFunc() {
-    const mymenu = document.querySelector('.headB')
-    if (mymenu.style.maxHeight) {
-      mymenu.style.maxHeight = null
-    } else {
-      mymenu.style.maxHeight = mymenu.scrollHeight + 'px'
-    }
-  }
-  
-  const headC = document.querySelector('.headC')
-  headC.addEventListener('click', function() {
-    myFunc()
-  })
-});
-
-`}</script>
   </Helmet>
   )
 }
