@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { faChartBar, faChevronRight, faCogs, faRocket } from "@fortawesome/free-solid-svg-icons";
-// import Fruits from "../../content/assets/fruits.jpg";
+// import Fruits from "../../content/assets/fruits.webp";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
